@@ -1,5 +1,19 @@
 {{!-- The following component displays Ember's default welcome message. --}}
 {{!-- {{welcome-page}} --}}
 {{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="window">
+    <div class="window-content">
+        <div class="pane-group">
+            <div class="pane-sm sidebar">
+                <nav class="nav-group">
+                    {{#link-to 'index' class="nav-group-item"}}Home{{/link-to}}
+                    {{#link-to 'report-generator' class="nav-group-item"}} Report Generator {{/link-to}}
+                    {{#link-to 'report-scheduler' class="nav-group-item"}} Report Scheduler {{/link-to}}
+                </nav>
+            </div>
+            <div class="pane">
+                {{outlet}}
+            </div>
+        </div>
+    </div>
+</div>

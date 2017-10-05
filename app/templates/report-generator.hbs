@@ -1,0 +1,12 @@
+{{outlet}}
+<h4> Report Generator</h4>
+{{#folder-chooser folder= model setChosenFolder="setChosenFolder" }}{{/folder-chooser}}
+{{#if model.folderChosen}}
+    {{#file-chooser folder=model }}{{/file-chooser}}
+{{/if}}
+{{#if model.filesArray}}
+    {{#job-sender files=model}}{{/job-sender}}
+{{/if}}
+{{#link-to 'index' class="button" }}
+    Back
+{{/link-to}}

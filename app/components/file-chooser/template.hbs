@@ -1,0 +1,25 @@
+{{#if folder.filesInFolder}}
+    <div style="width:200px">
+        <table class="table-striped">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Selected</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each folder.filesChosen as |file index|}}
+                <tr style="width:200px">
+                    <td>{{file.name}}</td>
+                    <td>
+                        <label>
+                        {{input type="checkbox" checked=file.selected change=(action "changeAction" index)}}
+                        </label>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+        </table>
+    </div>
+    
+{{/if}}

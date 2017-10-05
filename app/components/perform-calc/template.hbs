@@ -5,7 +5,7 @@
 {{input value=formula.val placeholder="Enter your formula here..."}}
 <div id="result"></div>
 <button {{action "calculate" formula}}>calculate</button>
-
+{{#folder-chooser folder = model}}{{/folder-chooser}}
 
 {{!-- <form id="NewPost">
     <p>
